@@ -56,7 +56,7 @@ namespace Prak_week_8
 
                 labelShowManager1.Text = dtMC1.Rows[0][0].ToString();
                 labelShowCaptain1.Text = dtMC1.Rows[0][1].ToString();
-                cek = 1;
+                cek++;
             }
             catch (Exception)
             {
@@ -77,7 +77,7 @@ namespace Prak_week_8
                 labelShowManager2.Text = dtMC2.Rows[0][0].ToString();
                 labelShowCaptain2.Text = dtMC2.Rows[0][1].ToString();
                 cek++;
-                if (cek == 2)
+                if (cek % 2 == 0)
                 {
                     //buat stadium & capacity
                     DataTable dtSC = new DataTable();
