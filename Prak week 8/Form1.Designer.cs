@@ -44,6 +44,13 @@ namespace Prak_week_8
             this.labelCapacity = new System.Windows.Forms.Label();
             this.labelShowStadium = new System.Windows.Forms.Label();
             this.labelShowCapacity = new System.Windows.Forms.Label();
+            this.buttonCheck = new System.Windows.Forms.Button();
+            this.labelShowSkor = new System.Windows.Forms.Label();
+            this.labelShowTgl = new System.Windows.Forms.Label();
+            this.labelSkor = new System.Windows.Forms.Label();
+            this.labelTgl = new System.Windows.Forms.Label();
+            this.dataGridViewOutput = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOutput)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxShow1
@@ -58,7 +65,7 @@ namespace Prak_week_8
             // comboBoxShow2
             // 
             this.comboBoxShow2.FormattingEnabled = true;
-            this.comboBoxShow2.Location = new System.Drawing.Point(480, 37);
+            this.comboBoxShow2.Location = new System.Drawing.Point(509, 37);
             this.comboBoxShow2.Name = "comboBoxShow2";
             this.comboBoxShow2.Size = new System.Drawing.Size(266, 28);
             this.comboBoxShow2.TabIndex = 1;
@@ -67,7 +74,7 @@ namespace Prak_week_8
             // labelVs
             // 
             this.labelVs.AutoSize = true;
-            this.labelVs.Location = new System.Drawing.Point(372, 44);
+            this.labelVs.Location = new System.Drawing.Point(401, 44);
             this.labelVs.Name = "labelVs";
             this.labelVs.Size = new System.Drawing.Size(31, 20);
             this.labelVs.TabIndex = 2;
@@ -85,7 +92,7 @@ namespace Prak_week_8
             // labelManager2
             // 
             this.labelManager2.AutoSize = true;
-            this.labelManager2.Location = new System.Drawing.Point(476, 104);
+            this.labelManager2.Location = new System.Drawing.Point(505, 104);
             this.labelManager2.Name = "labelManager2";
             this.labelManager2.Size = new System.Drawing.Size(76, 20);
             this.labelManager2.TabIndex = 4;
@@ -103,7 +110,7 @@ namespace Prak_week_8
             // labelCaptain2
             // 
             this.labelCaptain2.AutoSize = true;
-            this.labelCaptain2.Location = new System.Drawing.Point(476, 143);
+            this.labelCaptain2.Location = new System.Drawing.Point(505, 143);
             this.labelCaptain2.Name = "labelCaptain2";
             this.labelCaptain2.Size = new System.Drawing.Size(68, 20);
             this.labelCaptain2.TabIndex = 6;
@@ -121,7 +128,7 @@ namespace Prak_week_8
             // labelShowManager2
             // 
             this.labelShowManager2.AutoSize = true;
-            this.labelShowManager2.Location = new System.Drawing.Point(558, 104);
+            this.labelShowManager2.Location = new System.Drawing.Point(587, 104);
             this.labelShowManager2.Name = "labelShowManager2";
             this.labelShowManager2.Size = new System.Drawing.Size(21, 20);
             this.labelShowManager2.TabIndex = 8;
@@ -139,7 +146,7 @@ namespace Prak_week_8
             // labelShowCaptain2
             // 
             this.labelShowCaptain2.AutoSize = true;
-            this.labelShowCaptain2.Location = new System.Drawing.Point(558, 143);
+            this.labelShowCaptain2.Location = new System.Drawing.Point(587, 143);
             this.labelShowCaptain2.Name = "labelShowCaptain2";
             this.labelShowCaptain2.Size = new System.Drawing.Size(21, 20);
             this.labelShowCaptain2.TabIndex = 10;
@@ -148,7 +155,7 @@ namespace Prak_week_8
             // labelStadium
             // 
             this.labelStadium.AutoSize = true;
-            this.labelStadium.Location = new System.Drawing.Point(225, 216);
+            this.labelStadium.Location = new System.Drawing.Point(299, 227);
             this.labelStadium.Name = "labelStadium";
             this.labelStadium.Size = new System.Drawing.Size(72, 20);
             this.labelStadium.TabIndex = 11;
@@ -157,7 +164,7 @@ namespace Prak_week_8
             // labelCapacity
             // 
             this.labelCapacity.AutoSize = true;
-            this.labelCapacity.Location = new System.Drawing.Point(225, 256);
+            this.labelCapacity.Location = new System.Drawing.Point(299, 267);
             this.labelCapacity.Name = "labelCapacity";
             this.labelCapacity.Size = new System.Drawing.Size(74, 20);
             this.labelCapacity.TabIndex = 12;
@@ -166,7 +173,7 @@ namespace Prak_week_8
             // labelShowStadium
             // 
             this.labelShowStadium.AutoSize = true;
-            this.labelShowStadium.Location = new System.Drawing.Point(317, 216);
+            this.labelShowStadium.Location = new System.Drawing.Point(391, 227);
             this.labelShowStadium.Name = "labelShowStadium";
             this.labelShowStadium.Size = new System.Drawing.Size(21, 20);
             this.labelShowStadium.TabIndex = 13;
@@ -175,17 +182,79 @@ namespace Prak_week_8
             // labelShowCapacity
             // 
             this.labelShowCapacity.AutoSize = true;
-            this.labelShowCapacity.Location = new System.Drawing.Point(317, 256);
+            this.labelShowCapacity.Location = new System.Drawing.Point(391, 267);
             this.labelShowCapacity.Name = "labelShowCapacity";
             this.labelShowCapacity.Size = new System.Drawing.Size(21, 20);
             this.labelShowCapacity.TabIndex = 14;
             this.labelShowCapacity.Text = "...";
             // 
+            // buttonCheck
+            // 
+            this.buttonCheck.Location = new System.Drawing.Point(374, 312);
+            this.buttonCheck.Name = "buttonCheck";
+            this.buttonCheck.Size = new System.Drawing.Size(103, 31);
+            this.buttonCheck.TabIndex = 15;
+            this.buttonCheck.Text = "Check";
+            this.buttonCheck.UseVisualStyleBackColor = true;
+            this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
+            // 
+            // labelShowSkor
+            // 
+            this.labelShowSkor.AutoSize = true;
+            this.labelShowSkor.Location = new System.Drawing.Point(393, 401);
+            this.labelShowSkor.Name = "labelShowSkor";
+            this.labelShowSkor.Size = new System.Drawing.Size(21, 20);
+            this.labelShowSkor.TabIndex = 19;
+            this.labelShowSkor.Text = "...";
+            // 
+            // labelShowTgl
+            // 
+            this.labelShowTgl.AutoSize = true;
+            this.labelShowTgl.Location = new System.Drawing.Point(393, 361);
+            this.labelShowTgl.Name = "labelShowTgl";
+            this.labelShowTgl.Size = new System.Drawing.Size(21, 20);
+            this.labelShowTgl.TabIndex = 18;
+            this.labelShowTgl.Text = "...";
+            // 
+            // labelSkor
+            // 
+            this.labelSkor.AutoSize = true;
+            this.labelSkor.Location = new System.Drawing.Point(301, 401);
+            this.labelSkor.Name = "labelSkor";
+            this.labelSkor.Size = new System.Drawing.Size(46, 20);
+            this.labelSkor.TabIndex = 17;
+            this.labelSkor.Text = "Skor:";
+            // 
+            // labelTgl
+            // 
+            this.labelTgl.AutoSize = true;
+            this.labelTgl.Location = new System.Drawing.Point(301, 361);
+            this.labelTgl.Name = "labelTgl";
+            this.labelTgl.Size = new System.Drawing.Size(70, 20);
+            this.labelTgl.TabIndex = 16;
+            this.labelTgl.Text = "Tanggal:";
+            // 
+            // dataGridViewOutput
+            // 
+            this.dataGridViewOutput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOutput.Location = new System.Drawing.Point(21, 453);
+            this.dataGridViewOutput.Name = "dataGridViewOutput";
+            this.dataGridViewOutput.RowHeadersWidth = 62;
+            this.dataGridViewOutput.RowTemplate.Height = 28;
+            this.dataGridViewOutput.Size = new System.Drawing.Size(852, 343);
+            this.dataGridViewOutput.TabIndex = 20;
+            // 
             // FormHasil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 323);
+            this.ClientSize = new System.Drawing.Size(885, 808);
+            this.Controls.Add(this.dataGridViewOutput);
+            this.Controls.Add(this.labelShowSkor);
+            this.Controls.Add(this.labelShowTgl);
+            this.Controls.Add(this.labelSkor);
+            this.Controls.Add(this.labelTgl);
+            this.Controls.Add(this.buttonCheck);
             this.Controls.Add(this.labelShowCapacity);
             this.Controls.Add(this.labelShowStadium);
             this.Controls.Add(this.labelCapacity);
@@ -204,6 +273,7 @@ namespace Prak_week_8
             this.Name = "FormHasil";
             this.Text = "Hasil Perbandingan";
             this.Load += new System.EventHandler(this.FormHasil_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOutput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,6 +296,12 @@ namespace Prak_week_8
         private System.Windows.Forms.Label labelCapacity;
         private System.Windows.Forms.Label labelShowStadium;
         private System.Windows.Forms.Label labelShowCapacity;
+        private System.Windows.Forms.Button buttonCheck;
+        private System.Windows.Forms.Label labelShowSkor;
+        private System.Windows.Forms.Label labelShowTgl;
+        private System.Windows.Forms.Label labelSkor;
+        private System.Windows.Forms.Label labelTgl;
+        private System.Windows.Forms.DataGridView dataGridViewOutput;
     }
 }
 
